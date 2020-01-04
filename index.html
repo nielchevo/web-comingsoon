@@ -1,50 +1,46 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<title>coming soon</title>
+	<title>Invizzle</title>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 <!--===============================================================================================-->	
 	<link rel="icon" type="image/png" href="images/icons/favicon.ico"/>
 <!--===============================================================================================-->
-	<!--link rel="stylesheet" type="text/css" href="vendor/bootstrap/css/bootstrap.min.css"-->
+	<link rel="stylesheet" type="text/css" href="vendor/bootstrap/css/bootstrap.min.css">
 <!--===============================================================================================-->
 	<link rel="stylesheet" type="text/css" href="fonts/font-awesome-4.7.0/css/font-awesome.min.css">
-<!--===============================================================================================-->
-	<!--link rel="stylesheet" type="text/css" href="vendor/animate/animate.css"-->
-<!--===============================================================================================-->
-	<!--link rel="stylesheet" type="text/css" href="vendor/select2/select2.min.css"-->
 <!--===============================================================================================-->
 	<link rel="stylesheet" type="text/css" href="css/main.css">
 <!--===============================================================================================-->
 </head>
 <body>
 	<div class="container">
+		<div class="content">
+			<canvas id="demo-canvas"></canvas>
+		 </div>
+
 		<div class="logo">
-			<img src="images/icons/logo2.jpg" alt="LOGO">
+			<img src="images/icons/logo.png" alt="LOGO">
 		</div>
 		<div class="coming">
 			<span>
-				comingsoon
+				coming soon
 			</span>
 		</div>
-
 		
-		<div class="countdown">
-			<div id="day"></div>
-			<div id="hour"></div>
-			<div id="minute"></div>
-			<div id="second"></div>
+		<div class="countdown cd100">
+			<div class="days">NA</div>
+			<div class="hours">NA</div>
+			<div class="minutes">NA</div>
+			<div class="seconds">NA</div>
 		</div>
 	</div>
 
 <!--===============================================================================================-->	
 	<script src="vendor/jquery/jquery-3.2.1.min.js"></script>
-<!--===============================================================================================-->
-	<script src="vendor/bootstrap/js/popper.js"></script>
+	<script src="vendor/bootstrap/js/popper.min.js"></script>
 	<script src="vendor/bootstrap/js/bootstrap.min.js"></script>
-<!--===============================================================================================-->
-	<script src="vendor/select2/select2.min.js"></script>
 <!--===============================================================================================-->
 	<script src="vendor/countdowntime/moment.min.js"></script>
 	<script src="vendor/countdowntime/moment-timezone.min.js"></script>
@@ -56,8 +52,6 @@
 		var difDate = moment.duration(launchDate.diff(now));
 		// console.log(difDate.asDays(), difDate.hours(), difDate.minutes(), difDate.seconds());
 		$('.cd100').countdown100({
-			/*Set Endtime here*/
-			/*Endtime must be > current time*/
 			endtimeYear: 0,
 			endtimeMonth: 0,
 			endtimeDate: difDate.asDays(),
@@ -69,15 +63,9 @@
 			//go to " http://momentjs.com/timezone/ " to get timezone
 		});
 	</script>
-<!--===============================================================================================-->
-	<script src="vendor/tilt/tilt.jquery.min.js"></script>
-	<script >
-		$('.js-tilt').tilt({
-			scale: 1.1
-		})
-	</script>
-<!--===============================================================================================-->
+	<!-- ANIM -->
+	<script src="js/TweenLite.min.js"></script>
+	<script src="js/EasePack.min.js"></script>
 	<script src="js/main.js"></script>
-
 </body>
 </html>
